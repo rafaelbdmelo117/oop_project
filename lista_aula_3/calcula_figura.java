@@ -38,6 +38,18 @@ public class calcula_figura{
         return areaQuadrado;
     }
 
+    //funcao para calcular perimetro do retangulo
+    public static double calculaPerimetroRetangulo(double x, double y){
+        double perimetroRetangulo = (2 * x) + (2 * y);
+        return perimetroRetangulo;
+    }
+
+    //funcao para calcular area do retangulo
+    public static double calculaAreaRetangulo(double x, double y){
+        double areaRetangulo = x * y;
+        return areaRetangulo;
+    }
+
     //funcao main
     public static void main(String[] args){
         //var para selecionar a figura geometrica
@@ -97,7 +109,28 @@ public class calcula_figura{
                 System.out.printf("\n");
                 break;
             case 3:
-                //funcao retangulo
+                //vars para receber as medidas do retangulo
+                double largura, altura;
+
+                //solicita a entrada das medidas ao usuario
+                System.out.print("Você selecionou retângulo.\n");
+                System.out.print("Insira a medida da largura do retângulo: ");
+                largura = scanDouble(entrada);
+                System.out.print("Insira a medida da altura do retângulo: ");
+                altura = scanDouble(entrada);
+
+                //joga os valores na funcao perimetro
+                resultadoPerimetro = calculaPerimetroRetangulo(largura, altura);
+                //joga os valores na funcao area
+                resultadoArea = calculaAreaRetangulo(largura, altura);
+
+                //mostra o resultado do perimetro
+                System.out.printf("O perímetro do retângulo é: " + "%,.2f", resultadoPerimetro);
+                System.out.printf("\n");
+                //mostra o resultado da area
+                System.out.printf("A área do retângulo é: " + "%,.2f", resultadoArea);
+                System.out.printf("\n");
+                break;
             case 4:
                 //funcao trapezio
                 break;
