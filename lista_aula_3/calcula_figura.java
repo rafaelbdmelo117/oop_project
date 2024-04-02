@@ -50,6 +50,18 @@ public class calcula_figura{
         return areaRetangulo;
     }
 
+    //funcao para calcular perimetro do trapezio
+    public static double calculaPerimetroTrapezio(double b, double B, double l1, double l2){
+        double perimetroTrapezio = b + B + l1 + l2;
+        return perimetroTrapezio;
+    }
+
+    //funcao para calcular area do trapezio
+    public static double calculaAreaTrapezio(double b, double B, double h){
+        double areaTrapezio = ((b + B) * h) / 2;
+        return areaTrapezio;
+    }
+
     //funcao main
     public static void main(String[] args){
         //var para selecionar a figura geometrica
@@ -132,7 +144,33 @@ public class calcula_figura{
                 System.out.printf("\n");
                 break;
             case 4:
-                //funcao trapezio
+                //vars para receber as medidas do trapezio
+                double bm, bM, l1, l2, h;
+
+                //solicita a entrada dos dados do trapezio
+                System.out.print("Você selecionou trapézio.\n");
+                System.out.print("Informe a medida da base menor do trapézio: ");
+                bm = scanDouble(entrada);
+                System.out.print("Informe a medida da base maior do trapézio: ");
+                bM = scanDouble(entrada);
+                System.out.print("Agora, informe a medida da altura do trapézio: ");
+                h = scanDouble(entrada);
+                System.out.print("Diga também a medida da lateral esquerda do trapézio: ");
+                l1 = scanDouble(entrada);
+                System.out.print("Por fim, digite a medida da lateral direita do trapézio: ");
+                l2 = scanDouble(entrada);
+
+                //joga os valores na funcao perimetro
+                resultadoPerimetro = calculaPerimetroTrapezio(bm, bM, l1, l2);
+                //joga os valores na funcao area
+                resultadoArea = calculaAreaTrapezio(bm, bM, h);
+
+                //mostra o resultado do perimetro
+                System.out.printf("O perímetro do trapézio é: " + "%,.2f", resultadoPerimetro);
+                System.out.printf("\n");
+                //mostra o resultado da area
+                System.out.printf("A área do trapézio é: " + "%,.2f", resultadoArea);
+                System.out.printf("\n");
                 break;
             default:
                 System.out.println("Esse valor não corresponde a nenhuma opção.");
