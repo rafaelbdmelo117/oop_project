@@ -1,19 +1,7 @@
 package Java.orientacao_a_objetos_projeto.lista_aula_3; 
 import java.util.Scanner;
 
-/*
-int array x sized (the user must insert the size). The program must print:
-the mean of the values; ok
-positive number quantity; ok
-negative number quantity; ok
-quantity of zeros; ok
-even number quantity; ok
-odd number quantity. ok
-create a function for each of the cases. ok
-*/
-
 public class conta_vetor {
-
     //integer scanning function
     public static int scanInt(Scanner scI) {
         return Integer.parseInt(scI.nextLine());
