@@ -68,7 +68,7 @@ public class testa_palindromo {
 
         //chamada da funcao de inversao
         esarf = stringInverter(industrializedFrase);
-        if(industrializedFrase == esarf){
+        if(industrializedFrase.equals(esarf)){
             System.out.println("Sim, esse texto é um palíndromo!");
             System.out.println(esarf);
         }else{
