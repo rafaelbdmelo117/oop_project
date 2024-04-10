@@ -9,7 +9,7 @@ public class testa_palindromo {
         return Integer.parseInt(scI.nextLine());
     }
 
-    //funcao para escanear string sem espaços
+    //funcao para escanear string
     public static String scanString(Scanner scS){
         return scS.nextLine();
     }
@@ -35,7 +35,7 @@ public class testa_palindromo {
         //int contador
         int counter = 0;
 
-        //loop that reverses the string (must be fixed)
+        //loop that reverses the string
         for(int i = (len - 1); i >= 0 ; i--){
             inverse[counter] = origin[i];
             counter++;
@@ -52,7 +52,7 @@ public class testa_palindromo {
         //scanner para a funcao
         Scanner entrada = new Scanner(System.in);
 
-        //string que vai recebe a frase invertida (reposicionar)
+        //string que vai recebe a frase invertida
         String esarf;
 
         //solicita a frase ao usuario

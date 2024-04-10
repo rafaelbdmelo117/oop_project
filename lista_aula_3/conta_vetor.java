@@ -16,10 +16,10 @@ public class conta_vetor {
         double mean;
 
         //loop that calculates the mean
-        for(int i = 0; i < array.length; i++){
+        for(int i = 0; i < array.length(); i++){
             sum = sum + array[i];
         }
-        mean = sum/array.length;
+        mean = sum/array.length();
 
         return mean;
     }
